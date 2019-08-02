@@ -1,0 +1,34 @@
+
+
+
+<h3>Click<a href="/">here</a>to return to main page</h3>
+<p>My comments:</p>
+<% @comments.each do |comment| %>
+    <p><%= comment.body %></p>
+    <form action= "/my_account" method= "post">
+        <input type= "hidden" name= "_method" value= "delete">
+        <input type= "hidden" name= "id" value= "<%= comment.id %>">
+    <button>delete comment</button>
+    </form>
+<% end %>
+
+<p>My photos:</p>
+<% @photos.each do |photo|%>
+    <img src="<%= photo.image_url %>" alt="">
+    <form action="/my_account" method = "post">
+        <input type="hidden" name="_method" value = "delete">
+        <input type="hidden" name="id" value = "<%= photo.id %>">
+        <button>delete photo</button>
+    </form>
+<% end %>
+
+
+
+<%# <form action="/my_account" method = "post">
+    <input type="hidden" name="image_url" value = "delete">
+    <button>delete</button>
+</form> %>
+
+
+<%# !!option to "delete"  comment and photo %> 
+<%# update? spoke with dt %>

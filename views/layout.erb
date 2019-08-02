@@ -2,11 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>Pier dives</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
 </head>
 <body>
 
+  <%# <form action="/sign_up">
+      <input type="hidden" name="signup">
+      <button>sign up</button>
+  </form> %>
+
+  <% if logged_in? %>
+    <h3>Wecome back <%= current_user.username %></h3>
+    <a href="/my_account">My account</a>
+    
+    <form action="/sessions" method = "post">
+      <input type="hidden" name= "_method" value= "delete">
+      <button>logout</button>
+    </form>
+    
+<% end %>
+
+<%#else %>
+     <%# <a href="http:/login/">login</a> %>
+
+
+    <%# <form action="/login">
+      <input type="hidden" name="login">
+      <button>login</button>
+  </form> %>
+  
   <%= yield %>
 
 </body>

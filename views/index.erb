@@ -1,1 +1,8 @@
-<h1>hello world</h1>
+<h1>Pier Dives of Melbourne</h1>
+<h3><a href="/sign_up">create an account</a> If you already have one, just  <a href="/login">login</a></h3>
+
+<% @piers.each do |pier|%>
+    <p><a href="/piers/<%=pier.id%>"><%= pier.title %><p></a>
+    <img src="<%= pier.image_url %>" alt="">
+<% end %>
+
