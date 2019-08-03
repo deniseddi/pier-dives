@@ -3,7 +3,125 @@
 }
 
 img {
-    max-width: 80%;
-    height: auto;
+    width: 50vw;
 }
 
+ .uwphotos img {
+    /* display: inline-block; */
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 7%;
+    object-fit: cover;
+} 
+    
+.uwphotos {
+    /* display:flex;
+    flex-wrap: wrap; */
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.background {
+    padding: 1em;
+    padding-bottom:0;
+    background: linear-gradient(270deg, #8ed7f6, #82d3f5,#b1dee2, #178cbe);
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+   }
+   
+#h1 {
+    margin-bottom: 0;
+    font-size: 3em;
+    font-family: 'Elsie', cursive;
+    text-shadow: 1px 1px 3px rgb(190, 245, 249);  
+         
+}
+
+#h2 {
+    
+    margin:0 0 0 15%;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid rgb(190, 245, 249); 
+}
+
+
+ul {
+ 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(270deg, #8ed7f6, #82d3f5,#b1dee2, #178cbe);
+}
+  
+  
+li {
+    padding-top: 0;
+    float:right;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color:rgb(186, 238, 240);
+  }
+
+  
+#login_image {
+    
+    width: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    /* background-size: cover; */
+    -webkit-background-size: cover;
+    margin: 3em auto;
+    color:white;
+    background-repeat: no-repeat;
+}
+.login {
+    text-align: center;
+}
+button {
+    background:none;
+    color: white;
+    size:inherit;
+    border-radius:10%;
+    border: 1px solid white;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    
+}
+
+button:hover { /* Green */
+    color: white;
+    background-color:#95d0f0;
+    
+  }
+
+  
+
+
+    /* @media screen and (max-width: 1024px){
+        img.bg {
+        left: 50%;
+        margin-left: -512px; }
+    } */

@@ -1,8 +1,7 @@
 require 'pry'   
 require 'sinatra'
-# require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 require_relative 'database_config'
-
 require_relative 'models/comment'
 require_relative 'models/pier'
 require_relative 'models/user'

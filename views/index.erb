@@ -1,8 +1,25 @@
-<h1>Pier Dives of Melbourne</h1>
-<h3><a href="/sign_up">create an account</a> If you already have one, just  <a href="/login">login</a></h3>
+<div class="background">
+    <h1 id ="h1">Pier Dives</h1>
+    <h2 id="h2">of Melbourne.</h2>
+</div>
+<nav class="nav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li class="li"><a href="/login">login</a></li>
+        <li class="li"><a href="/my_account">My account</a></li>
+    </ul>
+</nav>
 
-<% @piers.each do |pier|%>
-    <p><a href="/piers/<%=pier.id%>"><%= pier.title %><p></a>
-    <img src="<%= pier.image_url %>" alt="">
+<%# <h3><a href="/sign_up">create an account</a> If you already have one, just  <a href="/login">login</a></h3> %>
+
+<% @piers.each do |pier| %>
+    <div class="uwphotos">
+        <div>
+            <a href="/piers/<%=pier.id%>"><%= pier.title %></a>
+        </div>
+        <div>
+            <img src="<%= pier.image_url %>" alt="">
+        </div>
+    </div>
 <% end %>
 

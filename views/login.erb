@@ -1,11 +1,19 @@
-<h1>login</h1>
 
-<h3>You do not have an account yet? sign up,<a href="/sign_up"> here</a></h3>
+<body id="login_image" background="https://i.imgur.com/SZYR95a.jpg">
+    <div class="login">
+        <div>
+            <h1>login</h1>
+            <h3>If you do not have an account yet? sign up,<a href="/sign_up"> here</a></h3>
+        </div>
+        <div>
+            <form action="/sessions" method ="post">
+                <label for="">email</label>
+                <input type="text" name= "email">
+                <label for="">password</label>
+                <input type="password" name ="password">
+                <button id= "button_login">login</button>
+            </form>
+        </div>
+    </div>
+</body>
 
-<form action="/sessions" method ="post">
-    <label for="">email</label>
-    <input type="text" name= "email">
-    <label for="">password</label>
-    <input type="password" name ="password">
-    <button>login</button>
-</form>
