@@ -29,3 +29,8 @@ INSERT INTO piers (title,image_url) VALUES('Flinders','https://i.pinimg.com/orig
 -- DO:
 ALTER TABLE users ADD COLUMN username VARCHAR(300);
 
+ALTER TABLE piers ADD COLUMN paragraph_1 VARCHAR(400);
+
+ALTER TABLE piers ADD COLUMN paragraph_2 VARCHAR(400);
+
+UPDATE piers SET paragraph_1 ='', paragraph_2='' WHERE id =;

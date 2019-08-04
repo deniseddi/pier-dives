@@ -1,18 +1,27 @@
 
-<h1>Pier</h1>
 
-<h2><%= @pier.title %><h2>
-<img src="<%= @pier.image_url %>" alt="">
+<div class="container">
+    <img class="show-img" src="<%= @pier.image_url %>" alt="">
+    <div class="pier-text">
+        <h2 class= "pier_name"><% @pier.title %><h2>
+        <p><%= @pier.paragraph_1 %></p>
+        <p><%= @pier.paragraph_2 %></p>
 
-<span class = "weather">
-    <h3>Check the wind forecast for <a href="https://wind.willyweather.com.au/VIC/mornington-peninsula/<%= @pier.title %>.html"> <%=@pier.title %> pier</a> and also the<a href="https://tides.willyweather.com.au/VIC/mornington-peninsula/<%= @pier.title %>.html"> tide</a>
-    </h3>
-</span>
+        <div class = "weather">
+            <p>Check <%=@pier.title %> pier's  forecast for the <a class="tide-wind"  href="https://wind.willyweather.com.au/VIC/mornington-peninsula/<%= @pier.title %>.html">wind</a> and <a class="tide-wind"  href="https://tides.willyweather.com.au/VIC/mornington-peninsula/<%= @pier.title %>.html"> tide</a>
+        </p>
+        </div>
+    </div>
+</div>
+    
+</div>
 
+
+<div class="bottom-half">
 <form action="/comments" method = "post">
     <input value="<%= @pier.id %>" type="hidden" name = "pier_id">
     <textarea name= "body"></textarea>
-    <button>post comment</button>
+    <button class="btn-comment">post comment</button>
 </form>
 
 <% @comments.each do |comment|%>
@@ -23,12 +32,13 @@
     <%# <label for=""></label> %>
     <input type="hidden" name = "pier_id" value ="<%= @pier.id %>">
     <input type="text" name="image_url">
-    <button>post your photo url</button>
+    <button class="btn-photo">post your photo url</button>
 </form>
 
  <% @photos.each do |photo|%>
     <img src="<%= photo.image_url %>">
  <% end %>
+ </div>
 
 
 

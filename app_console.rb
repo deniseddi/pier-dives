@@ -5,4 +5,4 @@ require_relative 'models/pier'
 require_relative 'models/user'
 require_relative 'models/photo'
 
-# binding.pry
+binding.pry

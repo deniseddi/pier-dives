@@ -1,25 +1,40 @@
-<div class="background">
-    <h1 id ="h1">Pier Dives</h1>
-    <h2 id="h2">of Melbourne.</h2>
-</div>
-<nav class="nav">
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li class="li"><a href="/login">login</a></li>
-        <li class="li"><a href="/my_account">My account</a></li>
-    </ul>
-</nav>
+<body>
+<header>
+    <div class="background">
+        <h1 id ="h1">Pier Dives</h1>
+        <h2 id="h2">Melbourne.</h2>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li class="li"><a href="/login">login</a></li>
+            <li class="li"><a href="/sign_up">Create account</a></li>
+        </ul>
+    </nav>
+</header>
 
 <%# <h3><a href="/sign_up">create an account</a> If you already have one, just  <a href="/login">login</a></h3> %>
 
+<%# <body class = "index_photos"> %>
+<section class="index_section">
 <% @piers.each do |pier| %>
-    <div class="uwphotos">
+   <div class="uwphotos">
+    <figure>
         <div>
-            <a href="/piers/<%=pier.id%>"><%= pier.title %></a>
+           <figcaption><a href="/piers/<%=pier.id%>"><%= pier.title %></a></figcaption>
         </div>
         <div>
             <img src="<%= pier.image_url %>" alt="">
         </div>
+    </figure>
     </div>
 <% end %>
+</section>
+</body>
 
+ <%# <figure>
+  <p><img class=scaled src="st-tropez.jpg"
+    alt="St. Tropez">
+  <figcaption>Saint Tropez and its
+    fort in the evening sun</figcaption>
+</figure> %>
