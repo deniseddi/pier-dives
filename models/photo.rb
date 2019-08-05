@@ -1,3 +1,3 @@
 class Photo < ActiveRecord::Base
-    belongs_to :user #necessary?
+    belongs_to :user 
 end

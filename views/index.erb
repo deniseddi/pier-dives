@@ -13,22 +13,20 @@
     </nav>
 </header>
 
-<%# <h3><a href="/sign_up">create an account</a> If you already have one, just  <a href="/login">login</a></h3> %>
 
-<%# <body class = "index_photos"> %>
 <section class="index_section">
-<% @piers.each do |pier| %>
-   <div class="uwphotos">
-    <figure>
-        <div>
-           <figcaption><a href="/piers/<%=pier.id%>"><%= pier.title %></a></figcaption>
+    <% @piers.each do |pier| %>
+    <div class="uwphotos">
+            <figure>
+                <div>
+                <figcaption><a href="/piers/<%=pier.id%>"><%= pier.title %></a></figcaption>
+                </div>
+                <div>
+                    <img src="<%= pier.image_url %>" alt="">
+                </div>
+            </figure>
         </div>
-        <div>
-            <img src="<%= pier.image_url %>" alt="">
-        </div>
-    </figure>
-    </div>
-<% end %>
+    <% end %>
 </section>
 </body>
 

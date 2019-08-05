@@ -5,23 +5,20 @@
         <h2 class= "pier_name"><% @pier.title %><h2>
         <p><%= @pier.paragraph_1 %></p>
         <p><%= @pier.paragraph_2 %></p>
-
         <div class = "weather">
             <p>Check <%=@pier.title %> pier's  forecast for the <a class="tide-wind"  href="https://wind.willyweather.com.au/VIC/mornington-peninsula/<%= @pier.title %>.html">wind</a> and <a class="tide-wind"  href="https://tides.willyweather.com.au/VIC/mornington-peninsula/<%= @pier.title %>.html"> tide</a>
             </p>
         </div>
     </div>
 </div>
-
 <div class="bottom-half">
     <form action="/comments" method = "post">
         <input value="<%= @pier.id %>" type="hidden" name = "pier_id">
         <div class="align-center">
-            <textarea name= "body" placeholder="Tell us about your dive!" rows="5" id="comment_text" cols="57" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+            <textarea name= "body" placeholder="Tell us about your dive!" rows="5" id="comment_text" cols="60" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
         </div>
         <button class="btn-comment">Post your comment</button>
     </form>
-
     <section class="alternate-comment">
         <% @comments.each do |comment|%>
         <div class="testimonials">
@@ -29,14 +26,8 @@
         </div>
         <% end %>
     </section>
-
-   
-   
     <form action="/photos" method = "post">
-        <%# <label for=""></label> %>
         <input type="hidden" name = "pier_id" value ="<%= @pier.id %>">
-        <%# <input type="text" name="image_url"> %>
-        <%# <button class="btn-photo">post your photo url</button> %>
     </form>
     <% @photos.each do |photo|%>
         <img src="<%= photo.image_url %>">

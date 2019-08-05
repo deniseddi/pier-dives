@@ -1,19 +1,36 @@
-Project Name 
-
-    Pier dives app
 
 
-Link to the app 
+# Project Name 
+Pier dives- Web app
 
-Description
+![Image](https://i.imgur.com/so9inKH.jpg)
 
-    Pier dives app was developed with the Melbournians divers in mind. It lists the most popular piers, most located around the Mornington Peninsula. The app provides information about diving under each pier and a link to local weather forecast. It helps the users to decide where and when to dive. Because these dive sites also offer great photos opportunities, the app allows users to post their own diving photos.For that, users need to submmit a log in form.  It also let its users to write tips and share their dive experiences through posting comments. This Project was part onf an immersive software engineering course. 
+## Table of Contents
+- Description
+- Tecnologies
+- Features
+- Challenges
 
-Technologies
-    - Ruby 
+
+**Description**:
+
+    Pier dives app was developed with the Melbournians divers in mind. It lists the most popular piers around Melbourne. The app provides information about diving under each pier and a link to local weather (wind and tide) forecast. It helps the users to decide where and when to dive. It has a section for posting comments, letting users share tips and their dive experiences. To enable users to post their comments or delete them, they need to be logged in. This is a training project, which is part of an immersive software engineering course. It is my first project including front-end and back-end features. 
+
+**Technologies**:
+
+    - Ruby
+    - Ruby on rails gem
+    - Sinatra
     - SQL
-    - gems (Ruby on rails)
-    - libraries 
-    - erb
+    - Postgresql
+    - HTML
     - CSS
-
+   
+ **Features**:
+ 
+ Find out details about diving under the piers in Melbourne
+ Post comments and diving tips 
+ 
+ **Challenges**
+ This project tested my skills to create an app using new acquired knowlege in Ruby. Often my web app would break and that would make me revise and modify my code a number of times until I got the way the app should run. 
+ It was a good SQL practice, we just started to learn it. I had to alter database tables a few times and fill it with new data.

@@ -1,5 +1,4 @@
 require 'active_record' # different speling then on gem
-require 'pry'
 
 options = {
     adapter:'postgresql',
