@@ -29,8 +29,7 @@ end
 
 get '/piers/:id' do #this is the route that calls show! @ comments was not here and I was getting error method id message
   @pier = Pier.find(params[:id])
-  # @paragraph_1 = Pier.find
-  @comments = Comment.all 
+  @comments = Comment.where(pier_id: params[:id]) #Comment.all
   @photos = Photo.all
   erb :show
 end

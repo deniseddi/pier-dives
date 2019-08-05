@@ -7,37 +7,20 @@
   <link href="https://fonts.googleapis.com/css?family=Elsie|Montserrat|Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Londrina+Outline&display=swap" rel="stylesheet">
+
 <body>
-
-
-
-  <%# <form action="/sign_up">
-      <input type="hidden" name="signup">
-      <button>sign up</button>
-  </form> %>
-
+<div class= "top-welcome">
   <% if logged_in? %>
-    <h3>Wecome back <%= current_user.username %></h3>
-    <a href="/my_account">My account</a>
-    
+    <h4 class="welcome-h3">Wecome back <span class = "name-font"><%= current_user.username %><span></h4>
     <form action="/sessions" method = "post">
       <input type="hidden" name= "_method" value= "delete">
-      <button>logout</button>
-    </form>
-    
-<% end %>
-
-<%#else %>
-     <%# <a href="http:/login/">login</a> %>
-
-
-    <%# <form action="/login">
-      <input type="hidden" name="login">
-      <button>login</button>
-  </form> %>
-  
+      <button class="my-account-btn">logout</button>
+    </form> 
+    <a class="account-font" href="/my_account">My account</a>
+    <a class="account-font" href="/">Home</a>
+  <% end %>
+</div>
   <%= yield %>
-
 </body>
 </html>
 
