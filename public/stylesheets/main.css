@@ -351,7 +351,8 @@ textarea:focus {
 
 .name-font {
     font-family:'Raleway', sans-serif;
-    font-size:1.2em;
+    font-size:1em;
+    color:#f4b58b;
 }
 
 .testimonials:nth-child(odd)

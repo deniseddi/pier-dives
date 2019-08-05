@@ -28,7 +28,7 @@ end
 
 get '/piers/:id' do 
   @pier = Pier.find(params[:id])
-  @comments = Comment.where(pier_id: params[:id]) 
+  @comments = Comment.where(pier_id: params[:id])
   @photos = Photo.all
   erb :show
 end
