@@ -34,10 +34,13 @@ https://pier-dives-melbourne.herokuapp.com/
 
  ### 3. Features:  
  
- * Pier description  
- * Wind and Tide forcast  
- * User log in  
- * User can read and post comments for each pier
+ * Each Pier has a brief description about it.  
+ * Link to wind and tide forcast  
+ * Users can:
+   * create and account
+   * log in  
+   * read and post comments for each pier  
+   * delete own comments
  
  ### 4. Challenges:
  This project tested my skills to create an app using new acquired knowlege in Ruby. Often my web app would break and that would make me revise and modify my code a number of times, until I got the way the app should run. 
