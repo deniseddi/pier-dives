@@ -90,6 +90,7 @@ post '/comments' do
   redirect "/piers/#{params[:pier_id]}"  
 end
 
+
 delete '/my_account' do
   comment = Comment.find(params[:id])
   comment.destroy
